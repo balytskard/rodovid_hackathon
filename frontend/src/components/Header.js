@@ -12,9 +12,9 @@ function Header({ onAddClick, isEncrypted, onToggleEncryption }) {
           </h1>
           <p className="header-subtitle">Мій Рід</p>
         </div>
-        
+
         <div className="header-actions">
-          <button 
+          <button
             className="diia-btn btn-secondary"
             onClick={onToggleEncryption}
             title={isEncrypted ? "Розшифрувати" : "Зашифрувати"}
@@ -22,8 +22,8 @@ function Header({ onAddClick, isEncrypted, onToggleEncryption }) {
             <span>{isEncrypted ? '🔒' : '🔓'}</span>
             <span>{isEncrypted ? 'Зашифровано' : 'Розшифровано'}</span>
           </button>
-          
-          <button 
+
+          <button
             className="diia-btn btn-primary"
             onClick={onAddClick}
           >
@@ -37,4 +37,3 @@ function Header({ onAddClick, isEncrypted, onToggleEncryption }) {
 }
 
 export default Header;
-
