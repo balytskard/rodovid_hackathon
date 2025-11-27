@@ -1,0 +1,136 @@
+/* Дія UI - Базові стилі */
+
+:root {
+  /* Кольори Дія */
+  --diia-primary: #000000;
+  --diia-primary-dark: #333333;
+  --diia-gradient-start: #a8ff78;
+  --diia-gradient-end: #fbc2eb;
+  --diia-card-bg: #FFFFFF;
+  --diia-text-primary: #1A1A1A;
+  --diia-text-secondary: #666666;
+  --diia-border: #E0E0E0;
+  --diia-shadow: rgba(0, 0, 0, 0.05);
+  --diia-success: #4CAF50;
+  --diia-error: #F44336;
+  --diia-warning: #FF9800;
+  --diia-radius: 24px;
+  --diia-radius-sm: 12px;
+  --diia-radius-pill: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, #a8ff78 0%, #78ffd6 30%, #a18cd1 70%, #fbc2eb 100%);
+  min-height: 100vh;
+  color: var(--diia-text-primary);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Утиліти */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--diia-card-bg);
+  border-radius: var(--diia-radius);
+  box-shadow: 0 4px 24px var(--diia-shadow);
+  padding: 24px;
+  margin-bottom: 16px;
+  border: none;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--diia-radius-pill);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--diia-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--diia-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--diia-text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background: #F5F5F5;
+}
+
+.btn-danger {
+  background: #FFE5E5;
+  color: #D93025;
+}
+
+.btn-danger:hover {
+  background: #FFCCCC;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #E0E0E0 !important;
+  color: #999;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid transparent;
+  background: #F5F5F5;
+  border-radius: var(--diia-radius-sm);
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  background: #FFFFFF;
+  border-color: var(--diia-primary);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}

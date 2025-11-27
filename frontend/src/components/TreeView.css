@@ -1,0 +1,74 @@
+/* TreeView.css */
+
+.tree-container {
+  overflow: auto;
+  background: white;
+  border-radius: 8px;
+}
+
+#graph {
+  display: flex;
+  justify-content: center;
+}
+
+/* Вузли */
+.node {
+  cursor: pointer;
+}
+
+.node rect {
+  fill: #fff;
+  stroke: #ccc;
+  stroke-width: 0;
+  transition: all 0.3s ease;
+}
+
+/* Імітація кружечків через CSS */
+/* dTree малює rect, тому ми робимо їх округлими або використовуємо псевдоелементи */
+
+/* Чоловіки - Зелені */
+.node-male rect {
+  fill: #81C784 !important;
+  stroke: none;
+  rx: 15; /* Радіус заокруглення */
+  ry: 15;
+}
+
+/* Жінки - Рожеві */
+.node-female rect {
+  fill: #F06292 !important;
+  stroke: none;
+  rx: 15;
+  ry: 15;
+}
+
+.node-text {
+  font-family: sans-serif;
+  fill: white !important;
+  font-weight: bold;
+  font-size: 14px;
+  text-anchor: middle;
+  transform: translate(0, 5px); /* Центрування */
+}
+
+/* Лінії */
+.linage {
+  fill: none;
+  stroke: #999;
+  stroke-width: 2px;
+}
+
+.marriage {
+  fill: none;
+  stroke: #E91E63;
+  stroke-width: 2px;
+  stroke-dasharray: 4; /* Пунктир для шлюбу */
+}
+
+/* Щоб приховати стандартні прямокутники і зробити свої стилі */
+g.node rect {
+    width: 100px;
+    height: 40px;
+    x: -50px; /* Центрування */
+    y: -20px;
+}
